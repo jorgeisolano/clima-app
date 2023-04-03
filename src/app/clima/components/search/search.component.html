@@ -1,0 +1,8 @@
+<div class="form-floating">
+    <input type="text" class="form-control" id="ciudad"
+        placeholder="Busca una ciudad" [formControl]="ciudadCtrl">
+    <label for="ciudad">Busca una ciudad</label>
+</div>
+<ul class="list-group" *ngFor="let ciudad of ciudadesBuscador$ | async">
+    <li class="list-group-item" (click)="seleccionarCiudad(ciudad)">{{ciudad.name}} - {{ciudad.admin1}}</li>
+</ul>
